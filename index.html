@@ -4,15 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Rock/Paper/Scissors</title>
   </head>
   <body>
-    <h1 class="title">Start Game</h1>
-    <button class="Rock">Rock</button>
-    <button class="Paper">Paper</button>
-    <button class="Scissors">Scissors</button>
-    <p class="player_score">0</p>
-    <p class="computer_score">0</p>
+    <div class="game_container">
+      <div class="game_wrapper">
+        <h1 class="game_title">Rock Paper Scissors</h1>
+
+        <div class="game_interface">
+          <div class="game_player">
+            <h2 class="player">Player</h2>
+            <p class="player_score">0</p>
+
+            <button>
+              <img href="#" src="assets/fist.png" class="Rock" />
+            </button>
+            <button>
+              <img href="#" src="assets/palm-of-hand.png" class="Paper" />
+            </button>
+            <button>
+              <img href="#" src="assets/scissor.png" class="Scissors" />
+            </button>
+          </div>
+
+          <div class="game_computer">
+            <h2 class="computer">Computer</h2>
+            <p class="computer_score">0</p>
+
+            <img class="comp_selection" />
+          </div>
+        </div>
+        <div class="ties">Ties: 0</div>
+      </div>
+      <div class="modal">
+        <h2 class="modal_title">Game Over</h2>
+        <p class="modal_text"></p>
+        <button class="modal_button">Reset Game</button>
+      </div>
+      <div class="overlay"></div>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>

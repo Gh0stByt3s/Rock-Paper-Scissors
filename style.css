@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100px;
+  padding-right: 1rem;
+}
+
+button {
+  outline: transparent;
+  background-color: azure;
+  cursor: pointer;
+  border: none;
+}
+
+.modal_button {
+  padding: 1em 2em;
+  font-size: 2rem;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.game_container {
+  background-color: azure;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.game_wrapper {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.game_interface {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  padding: 2rem;
+}
+
+.player_score,
+.computer_score,
+.player,
+.computer,
+.ties {
+  font-size: 3rem;
+  padding: 1rem 0;
+}
+
+.modal {
+  position: fixed;
+  top: -10%;
+  background-color: rgb(123, 156, 218);
+  width: 100%;
+  max-width: 600px;
+  padding: 4em;
+  transform: scale(0.1);
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+  z-index: 10;
+  border-radius: 10px;
+}
+
+.modal_title {
+  margin-bottom: 1em;
+  font-size: 3rem;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal_active {
+  transform: scale(1);
+  visibility: visible;
+  top: 40%;
+}
+
+.overlay.active {
+  visibility: visible;
+  pointer-events: all;
+}
